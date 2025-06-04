@@ -1,0 +1,78 @@
+.general-options-container
+{
+    width: 90%;
+    border-bottom: 1px solid black;
+    padding-bottom: 1%;
+    margin: 5%
+}
+
+.hide{
+    display: none;
+}
+
+#nameText
+{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.general-options-text
+{
+    font-size: 8pt;
+}
+
+.general-edit-button-container
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#general-edit-toggle
+{
+    width: fit-content;
+}
+
+.text-container-vertical
+{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.general-form
+{
+    display: grid;
+    margin-left:5%;
+    margin-right: 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    row-gap: 8px;
+    column-gap: 8px;
+}
+
+.form-item
+{
+    display: flex;
+    gap:16px;
+}
+
+.form-item label
+{
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.form-item input
+{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.submit-button
+{
+    justify-self: center;
+    grid-area: 4 / 1 / span 1 / span 2;
+}

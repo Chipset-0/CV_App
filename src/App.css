@@ -1,0 +1,45 @@
+:root{
+  background-color: aliceblue;
+}
+
+#root {
+  width:inherit;
+  height:inherit;
+  display: grid;
+  justify-items: center;
+  display: grid;
+  grid-template-rows: 2fr 14fr 2fr;
+  min-width: 400px;
+}
+
+.cv-display{
+  background-color: white;
+  aspect-ratio: 1 / 1.4142;
+  height:100%;
+  min-width: 300px;
+  width: 21cm;
+}
+
+.page-actions{
+  background-color: white;
+  width: 30%;
+  display: flex;
+}
+
+.page-action-button
+{
+  height: fit-content;
+}
+
+@cv-display{
+  size:21cm 29.7cm;
+  margin: 30mm 45mm 30mm 45mm;
+}
+
+@media print {
+  body{
+    width:21cm;
+    height: 29.7cm;
+    margin: 30mm 45mm 30mm 45mm;
+  }
+}

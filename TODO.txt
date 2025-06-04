@@ -1,0 +1,7 @@
+- Implement Page Creation for Default Page (Default Values)
+- Create State Variables for 
+
+
+
+https://github.com/the-unfallen/odincv-netlify/tree/main/src/components
+https://theunfallenodincv3.netlify.app/
