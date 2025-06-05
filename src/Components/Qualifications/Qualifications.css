@@ -1,3 +1,33 @@
 .hide{
     display: none;
 }
+
+.qualification-container
+{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin: 0% 5%;
+    font-size: 8pt;
+}
+
+.container-left
+{
+    text-align: left;
+}
+
+.container-right
+{
+    text-align: right;
+}
+
+.qualification-title, .qualification-date
+{
+    font-size: 14pt;
+}
+
+.qualification-edit-button-container
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

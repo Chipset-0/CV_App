@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { jsPDF } from "jspdf"
 import './App.css'
 import General from './Components/General/General'
+import Qualifications from './Components/Qualifications/Qualifications'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
       </div>
       <div className="cv-display">
           <General />
+          <Qualifications />
       </div>
       <div className="page-actions">
           <button id="reset-cv " className="page-action-button">Reset</button>
