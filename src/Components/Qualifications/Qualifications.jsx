@@ -26,7 +26,7 @@ export default function Qualifications()
     )
 }
 
-function QualificationObjectFactory(title="Title", date="1815", source="Placeholder Place", detail="Placeholder")
+function QualificationObjectFactory(title="Title", date="YYYY", source="Placeholder Place", detail="Placeholder")
 {
     return {
         title: title,
@@ -35,6 +35,22 @@ function QualificationObjectFactory(title="Title", date="1815", source="Placehol
         detail: detail
     }
 }
+
+function QualificationContainerEdit({qualification})
+{
+
+    return(
+        <div className='qualification-container'>
+            <div className='container-vertical'>
+                <div className="qualification-title">{qualification.title}</div>
+                <div className='qualification-date'>{qualification.date}</div>
+                <div className="qualification-text">{qualification.source}</div>
+                <div className="qualification-text">{qualification.detail}</div>
+            </div>
+        </div>
+    )
+}
+
 
 function QualificationEdit({qualificationData, setQualificationData, setIsEditingQualification})
 {    const handleSubmit = (event) => {
@@ -53,8 +69,9 @@ function QualificationEdit({qualificationData, setQualificationData, setIsEditin
 
     return(
         <div>
-            <form className='qualification-form' onSubmit={handleSubmit}>
-            </form>
+            {qualificationData.map(qualification => (
+                <QualificationContainerEdit qualification={qualification}/>
+            ))}
         </div>
     );
 }
@@ -81,11 +98,11 @@ function QualificationText({qualificationData, setIsEditingQualification})
 
     return(
         <div className="qualification-options-container" onMouseEnter={() => setQualificationIsHovered(true)} onMouseLeave={() => setQualificationIsHovered(false)}>
-            {qualificationData.map(qualification => (
-                <QualificationContainerText qualification={qualification}/>
+            {qualificationData.map((qualification, i) => (
+                <QualificationContainerText qualification={qualification} key={i}/>
             ))}
             <div className={`qualification-edit-button-container ${qualificationIsHovered ? "" : "hide"}`}>
-                <button id="qualification-edit-toggle" onClick={() => console.log("Entered", qualificationIsHovered)}>Edit?</button>
+                <button id="qualification-edit-toggle" onClick={() => setIsEditingQualification(true)}>Edit?</button>
             </div>
         </div>
     )

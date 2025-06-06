@@ -1,12 +1,15 @@
-.hide{
-    display: none;
+.qualification-options-container
+{
+    width: 90%;
+    border-bottom: 1px solid black;
+    padding-bottom: 1%;
+    margin: 5%
 }
 
 .qualification-container
 {
     display: grid;
     grid-template-columns: 4fr 1fr;
-    margin: 0% 5%;
     font-size: 8pt;
 }
 
@@ -20,6 +23,12 @@
     text-align: right;
 }
 
+.container-vertical
+{
+    display: flex;
+    flex-direction: column;
+}
+
 .qualification-title, .qualification-date
 {
     font-size: 14pt;
@@ -30,4 +39,8 @@
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.hide{
+    display: none;
 }
