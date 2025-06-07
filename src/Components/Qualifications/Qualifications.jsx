@@ -26,7 +26,7 @@ export default function Qualifications()
     )
 }
 
-function QualificationObjectFactory(title="Title", date="YYYY", source="Placeholder Place", detail="Placeholder")
+function QualificationObjectFactory(title="Title", date="YYYY", source="Placeholder Place", detail="A")
 {
     return {
         title: title,
@@ -36,17 +36,45 @@ function QualificationObjectFactory(title="Title", date="YYYY", source="Placehol
     }
 }
 
-function QualificationContainerEdit({qualification})
+
+function QualificationContainerEdit({qualificationData, setQualificationData, index})
 {
+    const qualification = qualificationData[index];
+
+    const handleChange = (e) => {
+        const type = e.target.type
+        const name = e.target.name
+
+        const value = e.target.value
+
+        const updated = {...qualification, [name]:value};
+        console.log("Updated ", index, updated, qualificationData)
+
+        setQualificationData(qualificationData.map((item, i) => i == index ? updated : item));
+        
+    }
+
+    const handleSubmit = (e) =>
+    {
+        e.preventDefault();
+    }
+    const deleteQualification = () =>
+    {
+        setQualificationData(qualificationData.filter((_, i) => i !== index));
+    }
 
     return(
-        <div className='qualification-container'>
-            <div className='container-vertical'>
-                <div className="qualification-title">{qualification.title}</div>
-                <div className='qualification-date'>{qualification.date}</div>
-                <div className="qualification-text">{qualification.source}</div>
-                <div className="qualification-text">{qualification.detail}</div>
-            </div>
+        <div className='qualification-edit-container'>
+            <form class='qualification-edit-form' onSubmit={handleSubmit}>
+                <input  className="qualification-title" name="title" placeholder={qualification.title}  onChange={handleChange}/>
+                <input  className='qualification-date' name="date"   placeholder={qualification.date}   onChange={handleChange} />
+                <input  className="qualification-text" name="source" placeholder={qualification.source} onChange={handleChange} />
+                <input  className="qualification-text" name="detail" placeholder={qualification.detail} onChange={handleChange} />
+                <div>
+                    <button type="submit" className='qualification-submit-button'>Save</button>
+                    <button type="button" className='qualification-delete-button' onClick={deleteQualification}>Delete</button>
+                </div>
+            </form>
         </div>
     )
 }
@@ -67,11 +95,20 @@ function QualificationEdit({qualificationData, setQualificationData, setIsEditin
         setQualificationData(qualificationData => ({ ...qualificationData, [name]:value}))
     }
 
+    const addQualification = () =>
+    {
+        setQualificationData(qualificationData => [...qualificationData, QualificationObjectFactory()])
+    }
+
     return(
-        <div>
-            {qualificationData.map(qualification => (
-                <QualificationContainerEdit qualification={qualification}/>
+        <div className='qualification-options-container'>
+            {qualificationData.map((qualification, i) => (
+                <QualificationContainerEdit qualificationData={qualificationData} setQualificationData={setQualificationData} index={i}/>
             ))}
+            <div class="qualification-edit-buttons-container">
+                <button id="add-qualification-button" onClick={addQualification}>Add</button>
+                <button id="finish-edit-qualification-button" onClick={handleSubmit}>Finish</button>
+            </div>
         </div>
     );
 }
@@ -83,7 +120,7 @@ function QualificationContainerText({qualification})
             <div className='container-left'>
                 <div className="qualification-title">{qualification.title}</div>
                 <div className="qualification-text">{qualification.source}</div>
-                <div className="qualification-text">{qualification.detail}</div>
+                <div className={`qualification-text ${qualification.detail.length == 0 ? "hide" : ""}`}>{qualification.detail}</div>
             </div>
             <div className='container-right'>
                 <div className='qualification-date'>{qualification.date}</div>
@@ -98,6 +135,7 @@ function QualificationText({qualificationData, setIsEditingQualification})
 
     return(
         <div className="qualification-options-container" onMouseEnter={() => setQualificationIsHovered(true)} onMouseLeave={() => setQualificationIsHovered(false)}>
+            <h3 className='section-header'>Qualifications</h3>
             {qualificationData.map((qualification, i) => (
                 <QualificationContainerText qualification={qualification} key={i}/>
             ))}

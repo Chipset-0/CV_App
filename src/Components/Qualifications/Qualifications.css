@@ -41,6 +41,59 @@
     align-items: center;
 }
 
+.qualification-edit-container
+{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    font-size: 8pt;
+}
+
+.qualification-edit-form
+{
+    display: grid;
+
+}
+
+.qualification-submit-button
+{
+    width: fit-content;
+    justify-self: right;
+    margin:8px;
+    margin-right: 10%;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgb(128, 188, 236);
+}
+
+.qualification-delete-button
+{
+    width: fit-content;
+    justify-self: right;
+    margin:8px;
+    margin-right: 10%;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgb(236, 128, 128);
+}
+
+.qualification-submit-button:hover {
+    background-color: rgb(83, 154, 212);
+
+}
+
+
+.qualification-delete-button:hover {
+    background-color: rgb(212, 83, 83);
+
+}
+
+.section-header
+{
+    margin-bottom: 3mm;
+}
+
 .hide{
     display: none;
 }
