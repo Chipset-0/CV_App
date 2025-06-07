@@ -5,6 +5,7 @@ import General from './Components/General/General'
 import Qualifications from './Components/Qualifications/Qualifications'
 import html2pdf from 'html2pdf.js'
 import TechnicalSkills from './Components/Technical/Technical Skills'
+import RelevantWorkExperience from './Components/RelatedWorkExperience/RelatedWorkExperience'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
           <General />
           <Qualifications />
           <TechnicalSkills />
+          <RelevantWorkExperience />
       </div>
       <div id="page-actions">
           <button id="print-cv " className="page-action-button" onClick={printCV}>Print</button>

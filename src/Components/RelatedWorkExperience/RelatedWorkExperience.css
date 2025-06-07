@@ -1,0 +1,75 @@
+.relwork-options-container
+{
+    width: 90%;
+    border-bottom: 1px solid black;
+}
+
+.relwork-edit-button-container
+{
+    display: grid;
+    justify-content: center;
+}
+
+.relwork-options-container
+{
+    display: grid;
+}
+
+.relwork-container-header
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 12pt;
+}
+
+.relwork-date
+{
+    margin-left: auto;
+    margin-right:0;
+}
+
+.relwork-location
+{
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.relwork-details-container
+{
+    border: 1px solid black;
+    padding:1mm 1cm;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:1mm;
+}
+
+.relwork-details
+{
+    font-size: 8pt;
+}
+
+.relwork-edit-form
+{
+    display: grid;
+    gap:2mm;
+    padding: 2mm;
+}
+
+.detail-container
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    gap:1cm;
+}
+
+.relwork-detail-delete-button
+{
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.hide
+{
+    display: none;
+}

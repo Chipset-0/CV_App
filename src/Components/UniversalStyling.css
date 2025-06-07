@@ -6,7 +6,9 @@
 .cv-section-margin
 {
     padding-bottom: 1%;
-    margin: 5%
+    margin: 5%;
+    margin-top:0%;
+    margin-bottom: 0%;
 }
 
 .hide{
