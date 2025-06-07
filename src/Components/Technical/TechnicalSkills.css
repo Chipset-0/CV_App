@@ -1,0 +1,52 @@
+.technical-container
+{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.technical-options-container
+{
+    width: 90%;
+    border-bottom: 1px solid black;
+}
+
+.technical-edit-button-container
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.technical-container-edit
+{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.technical-edit-form
+{
+    align-self: center;
+    justify-self: center;
+    display: grid;
+}
+
+.technical-input
+{
+    display: flex;
+    gap: 2cm;
+    justify-content: space-evenly;
+}
+
+.technical-input-buttons
+{
+    display: flex;
+    justify-content: center;
+    gap: 1cm;
+}
+
+.technical-input-buttons button
+{
+    margin: 1mm 0;
+}

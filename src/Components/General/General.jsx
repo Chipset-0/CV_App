@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './General.css'
+import '../UniversalStyling.css'
 
 
 function GeneralEdit({generalData,setGeneralData,setIsEditingGeneral

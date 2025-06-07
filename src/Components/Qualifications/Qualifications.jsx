@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Qualifications.css'
+import '../UniversalStyling.css'
 
 export default function Qualifications()
 {
@@ -48,7 +49,6 @@ function QualificationContainerEdit({qualificationData, setQualificationData, in
         const value = e.target.value
 
         const updated = {...qualification, [name]:value};
-        console.log("Updated ", index, updated, qualificationData)
 
         setQualificationData(qualificationData.map((item, i) => i == index ? updated : item));
         
@@ -71,8 +71,8 @@ function QualificationContainerEdit({qualificationData, setQualificationData, in
                 <input  className="qualification-text" name="source" placeholder={qualification.source} onChange={handleChange} />
                 <input  className="qualification-text" name="detail" placeholder={qualification.detail} onChange={handleChange} />
                 <div>
-                    <button type="submit" className='qualification-submit-button'>Save</button>
-                    <button type="button" className='qualification-delete-button' onClick={deleteQualification}>Delete</button>
+                    <button type="submit" className='submit-button'>Save</button>
+                    <button type="button" className='delete-button' onClick={deleteQualification}>Delete</button>
                 </div>
             </form>
         </div>
@@ -86,14 +86,6 @@ function QualificationEdit({qualificationData, setQualificationData, setIsEditin
         setIsEditingQualification(false)
     }
 
-    const handleChange = (e) => {
-        const type = e.target.type
-        const name = e.target.name
-
-        const value = e.target.value
-
-        setQualificationData(qualificationData => ({ ...qualificationData, [name]:value}))
-    }
 
     const addQualification = () =>
     {
@@ -101,7 +93,7 @@ function QualificationEdit({qualificationData, setQualificationData, setIsEditin
     }
 
     return(
-        <div className='qualification-options-container'>
+        <div className='qualification-options-container cv-section-margin'>
             {qualificationData.map((qualification, i) => (
                 <QualificationContainerEdit qualificationData={qualificationData} setQualificationData={setQualificationData} index={i}/>
             ))}
@@ -134,7 +126,7 @@ function QualificationText({qualificationData, setIsEditingQualification})
     const [qualificationIsHovered, setQualificationIsHovered] = useState(false)
 
     return(
-        <div className="qualification-options-container" onMouseEnter={() => setQualificationIsHovered(true)} onMouseLeave={() => setQualificationIsHovered(false)}>
+        <div className="qualification-options-container cv-section-margin" onMouseEnter={() => setQualificationIsHovered(true)} onMouseLeave={() => setQualificationIsHovered(false)}>
             <h3 className='section-header'>Qualifications</h3>
             {qualificationData.map((qualification, i) => (
                 <QualificationContainerText qualification={qualification} key={i}/>

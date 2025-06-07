@@ -1,0 +1,49 @@
+.section-header
+{
+    margin-bottom: 3mm;
+}
+
+.cv-section-margin
+{
+    padding-bottom: 1%;
+    margin: 5%
+}
+
+.hide{
+    display: none;
+}
+
+.submit-button
+{
+    width: fit-content;
+    justify-self: right;
+    margin:8px;
+    margin-right: 10%;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgb(128, 188, 236);
+}
+
+.delete-button
+{
+    width: fit-content;
+    justify-self: right;
+    margin:8px;
+    margin-right: 10%;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgb(236, 128, 128);
+}
+
+.submit-button:hover {
+    background-color: rgb(83, 154, 212);
+
+}
+
+
+.delete-button:hover {
+    background-color: rgb(212, 83, 83);
+
+}
