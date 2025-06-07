@@ -25,27 +25,27 @@ function GeneralEdit({generalData,setGeneralData,setIsEditingGeneral
             <form className='general-form' onSubmit={handleSubmit}>
                 <div class='form-item'>
                     <label htmlFor="general-name-form">Name: </label>
-                    <input type='text' id='general-name-form' name='name' onChange={handleChange} />
+                    <input type='text' id='general-name-form' name='name' placeholder={generalData.name} onChange={handleChange} />
                 </div>
                 <div class='form-item'>
                     <label htmlFor="general-address-input">Address: </label>
-                    <input type='text' id='general-address-input' name='address'onChange={handleChange} />
+                    <input type='text' id='general-address-input' name='address' placeholder={generalData.address} onChange={handleChange} />
                 </div>
                 <div class='form-item'>
                     <label htmlFor="general-email-input">Email: </label>
-                    <input type='text' id='general-email-input' name='email'onChange={handleChange} />
+                    <input type='text' id='general-email-input' name='email' placeholder={generalData.email} onChange={handleChange} />
                 </div>
                 <div class='form-item'>
                     <label htmlFor="general-phone-input">Phone: </label>
-                    <input type="text" id="general-phone-input" name="phone" onChange={handleChange} />
+                    <input type="text" id="general-phone-input" name="phone" placeholder={generalData.phone} onChange={handleChange} />
                 </div>
                 <div class='form-item'>
                     <label htmlFor="general-linkedIn-input">LinkedIn: </label>
-                    <input type="text" id="general-linkedIn-input" name="linkedIn"onChange={handleChange} />
+                    <input type="text" id="general-linkedIn-input" name="linkedIn" placeholder={generalData.linkedIn} onChange={handleChange} />
                 </div>
                 <div class='form-item'>
                     <label htmlFor="general-git-input">GitHub: </label>
-                    <input type="text" id="general-git-input" name="git"onChange={handleChange} />
+                    <input type="text" id="general-git-input" name="git" placeholder={generalData.git} onChange={handleChange} />
                 </div>
                 <button class="submit-button">Submit</button>
             </form>
@@ -82,8 +82,8 @@ export default function General()
         address: "Address",
         email: "place.holder@gmail.com",
         phone: "+00 000 000 000",
-        linkedIn: "https://www.linkedin.com/in/placeholder/",
-        git: "https://github.com/placeholder"
+        linkedIn: "linkedin.com/in/placeholder/",
+        git: "github.com/placeholder"
 
     })
 
