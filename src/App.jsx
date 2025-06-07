@@ -1,24 +1,29 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { jsPDF } from "jspdf"
 import './App.css'
 import General from './Components/General/General'
 import Qualifications from './Components/Qualifications/Qualifications'
+import html2pdf from 'html2pdf.js'
 
 function App() {
   const [count, setCount] = useState(0)
+  const cvRef = useRef()
+
+  const printCV = () => {
+      html2pdf().from(cvRef.current).save();
+  }
 
   return (
     <>
       <div className="page-title">
           <h1>CV Application</h1>
       </div>
-      <div className="cv-display">
+      <div className="cv-display" ref={cvRef}>
           <General />
           <Qualifications />
       </div>
-      <div className="page-actions">
-          <button id="reset-cv " className="page-action-button">Reset</button>
-          <button id="print-cv " className="page-action-button">Print</button>
+      <div id="page-actions">
+          <button id="print-cv " className="page-action-button" onClick={printCV}>Print</button>
       </div>
     </>
   )
