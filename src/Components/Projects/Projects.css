@@ -1,0 +1,75 @@
+.project-options-container
+{
+    width: 90%;
+    border-bottom: 1px solid black;
+}
+
+.project-edit-button-container
+{
+    display: grid;
+    justify-content: center;
+}
+
+.project-options-container
+{
+    display: grid;
+}
+
+.project-container-header
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 12pt;
+}
+
+.project-date
+{
+    margin-left: auto;
+    margin-right:0;
+}
+
+.project-location
+{
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.project-details-container
+{
+    border: 1px solid black;
+    padding:1mm 1cm;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:1mm;
+}
+
+.project-details
+{
+    font-size: 8pt;
+}
+
+.project-edit-form
+{
+    display: grid;
+    gap:2mm;
+    padding: 2mm;
+}
+
+.detail-container
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    gap:1cm;
+}
+
+.project-detail-delete-button
+{
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.hide
+{
+    display: none;
+}
