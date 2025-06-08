@@ -1,0 +1,58 @@
+.add-skill-container
+{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.add-skill-options-container
+{
+    width: 90%;
+    border-bottom: 1px solid black;
+}
+
+.add-skill-edit-button-container
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-skill-edit-button-container.hide
+{
+    display: none;
+}
+
+.add-skill-container-edit
+{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.add-skill-edit-form
+{
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    padding-top: 3mm;
+}
+
+.add-skill-skill
+{
+    margin: 2mm;
+}
+
+.add-skill-input-buttons
+{
+    display: flex;
+    justify-content: center;
+    gap: 1cm;
+}
+
+.add-skill-input-buttons button
+{
+    margin: 1mm 0;
+}

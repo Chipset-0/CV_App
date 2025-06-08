@@ -68,8 +68,6 @@ function AddWorkContainerEdit({addWorkData, setAddWorkData, index})
         const value = e.target.value;
         const key = parseInt(e.target.getAttribute("data-index"));
 
-        console.log(value, key, e.target)
-
         const updated = {...work, details:work.details.map((detail, i) => i == key ? value : detail)}
 
         setAddWorkData(addWorkData.map((item, i) => i == index ? updated : item));

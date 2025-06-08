@@ -8,6 +8,7 @@ import TechnicalSkills from './Components/Technical/Technical Skills'
 import RelevantWorkExperience from './Components/RelatedWorkExperience/RelatedWorkExperience'
 import AdditionalWorkExperience from './Components/AdditionalWorkExperience/AdditionalWorkExperience'
 import Projects from './Components/Projects/Projects'
+import AdditionalSkills from './Components/AdditionalSkills/AdditionalSkills'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,6 +30,7 @@ function App() {
           <RelevantWorkExperience />
           <AdditionalWorkExperience />
           <Projects />
+          <AdditionalSkills />
       </div>
       <div id="page-actions">
           <button id="print-cv " className="page-action-button" onClick={printCV}>Print</button>
