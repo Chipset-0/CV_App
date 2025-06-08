@@ -1,0 +1,75 @@
+.addwork-options-container
+{
+    width: 90%;
+    border-bottom: 1px solid black;
+}
+
+.addwork-edit-button-container
+{
+    display: grid;
+    justify-content: center;
+}
+
+.addwork-options-container
+{
+    display: grid;
+}
+
+.addwork-container-header
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 12pt;
+}
+
+.addwork-date
+{
+    margin-left: auto;
+    margin-right:0;
+}
+
+.addwork-location
+{
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.addwork-details-container
+{
+    border: 1px solid black;
+    padding:1mm 1cm;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:1mm;
+}
+
+.addwork-details
+{
+    font-size: 8pt;
+}
+
+.addwork-edit-form
+{
+    display: grid;
+    gap:2mm;
+    padding: 2mm;
+}
+
+.detail-container
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    gap:1cm;
+}
+
+.addwork-detail-delete-button
+{
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.hide
+{
+    display: none;
+}
