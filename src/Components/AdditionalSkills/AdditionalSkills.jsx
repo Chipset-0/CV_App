@@ -10,7 +10,7 @@ export default function AdditionalSkills()
     const [isEditingAdditionalSkills, setIsEditingAdditionalSkills] = useState(false)
 
     return (
-        <div>
+        <div className='section'>
             {isEditingAdditionalSkills ? (
                 <AdditionalEdit 
                     additionalData={additionalData}

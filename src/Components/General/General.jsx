@@ -92,7 +92,7 @@ export default function General()
     const [isEditingGeneral, setIsEditingGeneral] = useState(false)
 
     return (
-        <div>
+        <div className='section'>
             {isEditingGeneral ? (
                 <GeneralEdit 
                     generalData={generalData}

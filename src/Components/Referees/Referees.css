@@ -4,7 +4,9 @@
     border-bottom: 1px solid black;
 }
 
-
+.referee-edit-button-container.hide{
+    display: none;
+}
 
 .referee-container
 {

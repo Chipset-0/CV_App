@@ -11,7 +11,7 @@ export default function Referees()
     const [isEditingReferee, setIsEditingReferee] = useState(false)
 
     return (
-        <div>
+        <div className='section'>
             {isEditingReferee ? (
                 <RefereeEdit 
                     refereeData={refereeData}

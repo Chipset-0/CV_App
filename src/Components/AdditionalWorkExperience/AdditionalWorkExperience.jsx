@@ -12,7 +12,7 @@ export default function AdditionalWorkExperience()
     const [isEditingAddWork, setIsEditingAddWork] = useState(false)
 
     return (
-        <div>
+        <div className='section'>
             {isEditingAddWork ? (
                 <AddWorkEdit
                     addWorkData={addWorkData}

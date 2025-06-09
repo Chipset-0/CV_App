@@ -11,12 +11,15 @@ import Projects from './Components/Projects/Projects'
 import AdditionalSkills from './Components/AdditionalSkills/AdditionalSkills'
 import Referees from './Components/Referees/Referees'
 
+import printToPDF from './PDFGenerator'
+
 function App() {
   const [count, setCount] = useState(0)
   const cvRef = useRef()
 
   const printCV = () => {
-      html2pdf(cvRef.current, {html2canvas: {scale: 2}}).from().save();
+      printToPDF()
+      //html2pdf(cvRef.current, {html2canvas: {scale: 2}}).from().save();
   }
 
   return (
@@ -24,7 +27,7 @@ function App() {
       <div className="page-title">
           <h1>CV Application</h1>
       </div>
-      <div className="cv-display" ref={cvRef}>
+      <div id="cv-display" ref={cvRef}>
           <General />
           <Qualifications />
           <TechnicalSkills />

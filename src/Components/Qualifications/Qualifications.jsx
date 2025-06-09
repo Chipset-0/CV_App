@@ -11,7 +11,7 @@ export default function Qualifications()
     const [isEditingQualification, setIsEditingQualification] = useState(false)
 
     return (
-        <div>
+        <div className='section'>
             {isEditingQualification ? (
                 <QualificationEdit 
                     qualificationData={qualificationData}

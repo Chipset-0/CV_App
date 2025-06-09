@@ -12,7 +12,7 @@ export default function RelevantWorkExperience()
     const [isEditingRelWork, setIsEditingRelWork] = useState(false)
 
     return (
-        <div>
+        <div className='section'>
             {isEditingRelWork ? (
                 <RelWorkEdit
                     relWorkData={relWorkData}

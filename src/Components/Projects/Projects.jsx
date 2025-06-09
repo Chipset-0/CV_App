@@ -11,7 +11,7 @@ export default function Projects()
     const [isEditingProject, setIsEditingProject] = useState(false)
 
     return (
-        <div>
+        <div className='section'>
             {isEditingProject ? (
                 <ProjectEdit
                     projectData={projectData}

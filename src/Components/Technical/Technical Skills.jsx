@@ -8,7 +8,7 @@ export default function TechnicalSkills()
     const [isEditingTechnicalSkills, setIsEditingTechnicalSkills] = useState(false)
 
     return (
-        <div>
+        <div className='section'>
             {isEditingTechnicalSkills ? (
                 <TechnicalEdit 
                     technicalData={technicalData}
