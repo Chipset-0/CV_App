@@ -1,0 +1,61 @@
+.referee-options-container
+{
+    width: 90%;
+    border-bottom: 1px solid black;
+}
+
+
+
+.referee-container
+{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    font-size: 8pt;
+}
+
+.container-left
+{
+    text-align: left;
+}
+
+.container-right
+{
+    text-align: right;
+}
+
+.container-vertical
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.referee-name
+{
+    font-size: 14pt;
+}
+
+.referee-workplace
+{
+    font-style: italic;
+    font-size: 10pt;
+}
+
+.referee-edit-button-container
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.referee-edit-container
+{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    font-size: 8pt;
+}
+
+.referee-edit-form
+{
+    display: grid;
+
+}
