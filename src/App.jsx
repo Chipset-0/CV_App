@@ -15,7 +15,7 @@ function App() {
   const cvRef = useRef()
 
   const printCV = () => {
-      html2pdf().from(cvRef.current).save();
+      html2pdf(cvRef.current, {html2canvas: {scale: 2}}).from().save();
   }
 
   return (
