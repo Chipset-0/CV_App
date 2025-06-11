@@ -1,12 +1,1 @@
-- Implement Technical Skills
--Implement Related Work Experience
--Implement Additional Skills
--Implement Other Work Experience
--Implement Referees
--Fix styling of print button
--Put commonly used classes in universal css file i.e section-header, cv-section-margin, hide
 
-
-
-https://github.com/the-unfallen/odincv-netlify/tree/main/src/components
-https://theunfallenodincv3.netlify.app/
