@@ -97,7 +97,7 @@ function AddWorkContainerEdit({addWorkData, setAddWorkData, index})
                 <input className="addwork-location" name="location" placeholder={work.location} onChange={handleChange} />
                 <div className='addwork-details-container'>
                     {work.details.map((detail, i) => (
-                        <div key={i} class="detail-container">
+                        <div key={i} className="detail-container">
                             <input className='addwork-detail' name="detail" data-index={i} placeholder={detail} onChange={updateDetail} />
                             <button className='addwork-detail-delete-button delete-button' data-index={i} onClick={removeDetail}>Delete</button>
                         </div>

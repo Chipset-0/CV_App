@@ -21,34 +21,16 @@ export default function printToPDF() {
 
   
   const leeway = 200;
-  const pageHeightPx = 1122 - leeway;
-
   
-  const totalHeight = clone.getBoundingClientRect().height;
-  const numPages = Math.ceil(totalHeight / pageHeightPx);
-  console.log("Total height:", totalHeight, "Estimated pages:", numPages);
+  const totalHeight = clone.getBoundingClientRect().height + leeway;
 
-  
-  let cumulativeHeight = 0;
-  const children = Array.from(clone.children);
-
-  children.forEach(child => {
-    const childHeight = child.getBoundingClientRect().height;
-    cumulativeHeight += childHeight;
-    console.log("Cumulative height:", cumulativeHeight);
-
-    if (cumulativeHeight >= pageHeightPx) {
-      console.log("PageBreak!");
-      child.classList.add('page-break'); 
-    }
-  });
+  const totalHeightMMeter = totalHeight * 0.264583;
 
   const opt = {
     filename: 'CV.pdf',
     html2canvas: { scale: 2 },
-    margin: [10, 10],
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-    pagebreak: { mode: ['css', 'legacy'] }
+    jsPDF: { unit: 'mm', format: [210, totalHeightMMeter], orientation: 'portrait' },
+
   };
 
   html2pdf().set(opt).from(clone).output('dataurlnewwindow').then(() => {
